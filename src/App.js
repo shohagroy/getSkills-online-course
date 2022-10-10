@@ -4,17 +4,27 @@ import EnrollForm from './components/EnrollForm';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
 import Layout from './components/Layout';
+import Question from './Question';
 
 
 
 const router = createBrowserRouter([
   {
-      path: '/', element: <Layout/>,
+      path: '/',
+      element: <Layout/>,
       errorElement: <ErrorPage/>,
       children:[
-        {path: '/', element: <Home/>},
-        {path: '/home', element: <Home/>},
-        {path: '/enroll', element: <EnrollForm/>}
+        {path: '/',
+        loader: async () =>{
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+        },
+        element: <Home/>},
+        {path: '/enroll', element: <EnrollForm/>},
+        {path: '/quiz/:id', 
+        loader: async ({params}) =>{
+          return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+        },
+        element: <Question/>}
         
       ]
   }

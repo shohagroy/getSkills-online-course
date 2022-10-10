@@ -12,7 +12,7 @@ const Navigation = () => {
                 <img className='w-[120px] md:w-[150px]' src={Logo} alt="Logo" />
 
                 <div className='hidden md:inline' >
-                    <NavLink to='/home' className='px-3 font-bold hover:text-[#FF6A59] duration-300 md:text-xl '>Home</NavLink>
+                    <NavLink to='/' className='px-3 font-bold hover:text-[#FF6A59] duration-300 md:text-xl '>Home</NavLink>
                     <NavLink to='/enroll' className='px-3 font-bold hover:text-[#FF6A59] duration-300 md:text-xl '>Enroll</NavLink>
                     <NavLink to='/static' className='px-3 font-bold hover:text-[#FF6A59] duration-300 md:text-xl '>Static</NavLink>
                     <NavLink to='/about' className='px-3 font-bold hover:text-[#FF6A59] duration-300 md:text-xl '>About</NavLink>
