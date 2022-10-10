@@ -1,5 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@300;400;500;700;800&display=swap');
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+
+body{
+  font-family: 'Manrope', sans-serif;
+
+}
+
+.banar-container{
+  height: 90vh;
+  background-image: url('./assets/banner-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Rajdhani', sans-serif;
+  
+  /* position: relative; */
 }
