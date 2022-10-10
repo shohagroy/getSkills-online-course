@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Layout = () => {
+const Home = () => {
     return (
         <div>
-            layout component
+            home component
         </div>
     );
 };
 
-export default Layout;
+export default Home;
