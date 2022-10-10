@@ -4,7 +4,7 @@ import EnrollForm from './components/EnrollForm';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
 import Layout from './components/Layout';
-import Question from './Question';
+import Question from './components/Question';
 
 
 
