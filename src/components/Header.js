@@ -1,12 +1,12 @@
 import React from 'react';
-import Navigation from './Navigation'
-import Hero from './Hero'
+import Hero from './Hero';
+import Banar from './Banar';
 
 const Header = () => {
     return (
         <div>
-            <Navigation/>
             <Hero/>
+            <Banar/>
         </div>
     );
 };

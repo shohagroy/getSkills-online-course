@@ -6,7 +6,6 @@ const Navigation = () => {
 
     const [toggle, setToggle] = useState(false);
 
-    console.log(toggle)
     return (
         <div className=''>
             <div className='max-w-[1200px] m-auto  flex justify-between items-center py-5 px-3 relative'>
@@ -29,7 +28,7 @@ const Navigation = () => {
 
             </div>
 
-            <div className= {`flex flex-col text-center w-full h-screen bg-[#fbbdbd] text-white absolute top-[12vh] ${toggle ? 'right-0' : 'right-[-100%]' } duration-500 `} >
+            <div className= {`flex flex-col text-center w-full h-screen bg-[#fbbdbd] text-white absolute top-[11vh] ${toggle ? 'right-0' : 'right-[-100%]' } duration-500 `} >
                     <NavLink to='/home' className='p-3 font-bold hover:text-[#FF6A59] duration-300 text-2xl m-6 '>Home</NavLink>
                     <NavLink to='/static' className='p-3 font-bold hover:text-[#FF6A59] duration-300 text-2xl m-6 '>Static</NavLink>
                     <NavLink to='/about' className='p-3 font-bold hover:text-[#FF6A59] duration-300 text-2xl m-6 '>About</NavLink>
