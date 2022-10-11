@@ -3,44 +3,72 @@ import Option from './Option';
 
 import toast, { Toaster } from 'react-hot-toast';
 
+import swal from 'sweetalert';
+import { Link } from 'react-router-dom';
+
 
 const SingleQuestion = (props) => {
-
-    const { ques, setNewQuestion, newQuestion, questions } = props;
-
+    const { ques, setNewQuestion, newQuestion, questions, name } = props;
     const {question, correctAnswer, options } = ques;
-
     const [answer, setAnswer] = useState(false)
-
     const [tostHandel, setTostHandel] = useState(false)
-    
-    
+
+    let correctAns = parseInt(localStorage.getItem('correct'));
+    let wrongAns = parseInt(localStorage.getItem('wrong'));
+
+
+
 
     const optionClickHandelar = (ans)=>{
         setTostHandel(true)
-        
 
         if(correctAnswer === ans){
             toast.success(`Good job! you select ${ans} is Correct!`, {
                 duration: 5000,
                 position: 'top-center',
-                style: {background:'rgba(0, 128, 0, 0.6', color:'white', font:'bold'},
+                style: {background:'rgb(193, 248, 193)', color:'green', font:'bold'}
             })
 
-
-
+            if(correctAns){
+                correctAns  = correctAns + 1;
+                localStorage.setItem('correct', correctAns)
+            }
+            else{
+                localStorage.setItem('correct', 1)
+            }
 
         }else{
 
             toast.error(`Wrong! you select ${ans} is Wrong! Correct Answer is ${correctAnswer}`, {
                 duration: 5000,
                 position: 'top-center',
-                style: {background:'rgba(255, 0, 0, 6)', color:'white', font:'bold'},
+                style: {background:'rgb(250, 200, 200)', font:'bold', color:'red', font:'bold'},
             });
 
-            
-
+            if(wrongAns){
+                wrongAns  = wrongAns + 1;
+                localStorage.setItem('wrong', wrongAns)
+            }
+            else{
+                localStorage.setItem('wrong', 1)
+            }
         }
+    }
+
+
+    const viewResultHandelar = ()=>{
+
+        swal({
+            title: "Good job!",
+            text: `${name} Quiz Complete! Your Result Correct: ${correctAns} and Wrong: ${wrongAns} Please Visited Analices Page to get Result Chart`,
+            style: {textAlign:'center'} ,
+            icon: "success",
+          });
+
+          localStorage.setItem(name, JSON.stringify({corrcet: correctAns, wrong: wrongAns}))
+
+          localStorage.removeItem('correct');
+          localStorage.removeItem('wrong');
     }
 
     return (
@@ -75,7 +103,7 @@ const SingleQuestion = (props) => {
 
                     <div className=''>
                         {
-                            options.map(option => <Option optionClickHandelar={optionClickHandelar} key={option} option={option} options={options}  />   )
+                            options.map(option => <Option optionClickHandelar={optionClickHandelar} key={option} option={option} options={options}/>)
                         }
                     </div>
                         
@@ -85,7 +113,13 @@ const SingleQuestion = (props) => {
                 <div className='text-center mt-5'>
                 <button onClick={()=> setNewQuestion(newQuestion - 1)} type="button" className={`${newQuestion ? 'inline' : 'hidden'} px-8 m-2 py-3 font-semibold rounded bg-[#FF6A59] text-white`}   >Previous</button>
                 <button onClick={()=> setNewQuestion(newQuestion + 1)} type="button" className={`px-8 py-3 font-semibold rounded bg-[#FF6A59] text-white ${newQuestion + 1 === questions.length ? 'hidden' : 'inline'}`}>Next</button>
+
+                {
+                    <Link to='/' onClick={viewResultHandelar} type="button" className={`px-8 py-3 font-semibold rounded bg-[#FF6A59] text-white ${newQuestion + 1 === questions.length ? 'inline' : 'hidden'}`}>Get Result</Link>
+                }
+
                 </div>
+                
 
             </div>
         </div>

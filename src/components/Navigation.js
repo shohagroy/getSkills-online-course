@@ -14,7 +14,7 @@ const Navigation = () => {
                 <div className='hidden md:inline' >
                     <NavLink to='/' className='px-3 font-bold hover:text-[#FF6A59] duration-300 md:text-xl '>Home</NavLink>
                     <NavLink to='/enroll' className='px-3 font-bold hover:text-[#FF6A59] duration-300 md:text-xl '>Enroll</NavLink>
-                    <NavLink to='/static' className='px-3 font-bold hover:text-[#FF6A59] duration-300 md:text-xl '>Static</NavLink>
+                    <NavLink to='/statistics' className='px-3 font-bold hover:text-[#FF6A59] duration-300 md:text-xl '>Statistics</NavLink>
                     <NavLink to='/about' className='px-3 font-bold hover:text-[#FF6A59] duration-300 md:text-xl '>About</NavLink>
                     <NavLink to='/blog' className='px-3 font-bold hover:text-[#FF6A59] duration-300 md:text-xl '>Blog</NavLink>
                 </div>

@@ -24,7 +24,7 @@ const Question = () => {
             <p className='font-bold'>Total Question: {questions.length}</p>
 
             {
-                questions.slice(start, end).map(ques => <SingleQuestion ques={ques} setNewQuestion={setNewQuestion} newQuestion={newQuestion} questions={questions} key={ques.id}  />)
+                questions.slice(start, end).map(ques => <SingleQuestion ques={ques} setNewQuestion={setNewQuestion} newQuestion={newQuestion} name={name} questions={questions} key={ques.id}  />)
             }
             </div>
             
