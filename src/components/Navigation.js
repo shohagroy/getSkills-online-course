@@ -15,7 +15,6 @@ const Navigation = () => {
                     <NavLink to='/' className='px-3 font-bold hover:text-[#FF630E] duration-300  '>Home</NavLink>
                     <NavLink to='/enroll' className='px-3 font-bold hover:text-[#FF630E] duration-300 '>Enroll</NavLink>
                     <NavLink to='/statistics' className='px-3 font-bold hover:text-[#FF630E] duration-300 '>Statistics</NavLink>
-                    <NavLink to='/about' className='px-3 font-bold hover:text-[#FF630E] duration-300 '>About</NavLink>
                     <NavLink to='/blog' className='px-3 font-bold hover:text-[#FF630E] duration-300'>Blog</NavLink>
                 </div>
 
@@ -33,7 +32,6 @@ const Navigation = () => {
                     <NavLink to='/' className='p-3 font-bold hover:text-[#FF630E] duration-300 text-2xl m-3 '>Home</NavLink>
                     <NavLink to='/enroll' className='p-3 font-bold hover:text-[#FF630E] duration-300 text-2xl m-3 '>Enroll</NavLink>
                     <NavLink to='/statistics' className='p-3 font-bold hover:text-[#FF630E] duration-300 text-2xl m-6 '>Statistics</NavLink>
-                    <NavLink to='/about' className='p-3 font-bold hover:text-[#FF630E] duration-300 text-2xl m-3 '>About</NavLink>
                     <NavLink to='/blog' className='p-3 font-bold hover:text-[#FF630E] duration-300 text-2xl m-3 '>Blog</NavLink>
                 </div>
             

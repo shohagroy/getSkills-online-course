@@ -16,7 +16,7 @@ const Footer = () => {
 			</div>
 			<div className="col-span-6 text-center md:text-left md:col-span-3 ">
 				<p className="pb-1 font-bold text-2xl">Our Course</p>
-				<ul className='text-sm'>
+				<ul className='text-sm p-2 text-gray-900'>
 					<li>
 						HTML & CSS 
 					</li>

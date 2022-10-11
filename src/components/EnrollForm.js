@@ -1,4 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
+
+
+
+const enrollHandelar = ()=>{
+
+	swal({
+		title: "Enrolment Successfully!",
+		text: 'Your Enrolment Successfully Complete! We will sent the id or password in your email',
+		style: {textAlign:'center'} ,
+		icon: "success",
+	  });
+}
+
 
 const EnrollForm = () => {
     return (
@@ -41,7 +56,7 @@ const EnrollForm = () => {
 			</div>
 
             <div className='flex justify-center col-span-4'>
-            <button type="button" className="px-8 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800 hover:bg-[#FF6A59] hover:text-white duration-300">Submit</button>
+            <Link to='/' onClick={enrollHandelar} type="button" className="px-8 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800 bg-[#FF6A59] hover:text-white duration-300">Submit</Link>
             </div>
 
            
