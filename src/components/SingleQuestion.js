@@ -60,7 +60,7 @@ const SingleQuestion = (props) => {
 
         swal({
             title: "Good job!",
-            text: `${name} Quiz Complete! Your Result Correct: ${correctAns} and Wrong: ${wrongAns} Please Visited Analices Page to get Result Chart`,
+            text: `${name} Quiz Complete! Your Result Correct: ${correctAns} and Wrong: ${wrongAns} Please Visited Statistics Page to get Result Chart`,
             style: {textAlign:'center'} ,
             icon: "success",
           });

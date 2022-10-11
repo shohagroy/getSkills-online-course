@@ -5,34 +5,44 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,  } from 'r
 const Statistics = () => {
 
 
-    const react = JSON.parse(localStorage.getItem('React'));
-    const javascript = JSON.parse(localStorage.getItem('JavaScript'));
-    const css = JSON.parse(localStorage.getItem('CSS'))
-    const git = JSON.parse(localStorage.getItem('Git'))
+    let react = JSON.parse(localStorage.getItem('React'));
+    let javascript = JSON.parse(localStorage.getItem('JavaScript'));
+    let css = JSON.parse(localStorage.getItem('CSS'))
+    let git = JSON.parse(localStorage.getItem('Git'))
+    
+
+    if(react){
+        react.name = 'React';
+    }else{
+        react = {name: "React", corrcet:0, wrong:0};
+    }
+
+    if(css){
+        css.name = 'CSS';
+    }else{
+       css = {name: 'CSS', correct:0, wrong:0}
+    }
+    
+    if(javascript){
+        javascript.name = 'JavaScript';
+    }else{
+        javascript = {name: 'JavaScript', corrcet:0, wrong:0}
+    }
 
 
-    console.log(css)
-
-    // react ? react.name = "React" : react.name = "React"
-    css.name = 'CSS';
-    // react.name = 'React';
-    // javascript.name ="JavaScript";
-    // git.name = "Github"
+    if(git){
+        git.name = 'GitHub';
+    }else{
+        git = {name: 'GitHub', corrcet:0, wrong:0}
+    }
 
 
 
-
-const data = [
-    react ? react.name = 'React' : {name: 'React'},
+const studentResult = [
+    react,
     css,
-    javascript ? javascript.name = 'JavaScript' : {name: 'Javascript'},
-
-    {
-      name: 'GitHub',
-      corrcet: 5,
-      wrong: 8,
-      amt: 2000,
-    },
+    javascript,
+    git
   ];
 
   
@@ -42,13 +52,13 @@ const data = [
 
 
                  
-                    <div className='bg-white m-10 flex flex-col justify-center items-center'>
-                        <h2 className='bg-white  text-3xl'>Rechart example</h2>
+                    <div className='bg-white m-10 flex flex-col justify-center items-center border-2'>
+                        <h2 className='bg-white  text-3xl m-3'>Students Performance Analysis</h2>
                         
                         <BarChart
                         width={1000}
                         height={500}
-                        data={data}
+                        data={studentResult}
                         margin={{
                             top: 5,
                             right: 30,
