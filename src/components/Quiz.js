@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const Quiz = ({quiz}) => {
 
-    console.log(quiz)
 
     const {id, name, logo, total } = quiz;
 
