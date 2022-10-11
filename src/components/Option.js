@@ -1,6 +1,7 @@
 import React from 'react';
+import { Toaster } from 'react-hot-toast';
 
-const Option = ({option, options}) => {
+const Option = ({option, options, optionClickHandelar}) => {
 
     let optionNumber = options.indexOf(option) + 1;
 
@@ -9,7 +10,9 @@ const Option = ({option, options}) => {
         <div className='m-2 '>
 
             <label className='p-2 cursor-pointer'>
-                <input type="radio" name="fruit"/><span className='p-2'>{optionNumber}: {option}</span>
+                
+                <input onClick={()=> optionClickHandelar(option)} type="radio" name="fruit"/><span className='p-2'>{optionNumber}: {option}
+                </span>
             </label>
             
 

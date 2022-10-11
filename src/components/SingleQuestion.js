@@ -1,19 +1,57 @@
 import React, { useState } from 'react';
 import Option from './Option';
 
+import toast, { Toaster } from 'react-hot-toast';
+
+
 const SingleQuestion = (props) => {
 
     const { ques, setNewQuestion, newQuestion, questions } = props;
 
     const {question, correctAnswer, options } = ques;
 
-
     const [answer, setAnswer] = useState(false)
 
+    const [tostHandel, setTostHandel] = useState(false)
+    
     
 
+    const optionClickHandelar = (ans)=>{
+        setTostHandel(true)
+        
+
+        if(correctAnswer === ans){
+            toast.success(`Good job! you select ${ans} is Correct!`, {
+                duration: 5000,
+                position: 'top-center',
+                style: {background:'rgba(0, 128, 0, 0.6', color:'white', font:'bold'},
+            })
+
+
+
+
+        }else{
+
+            toast.error(`Wrong! you select ${ans} is Wrong! Correct Answer is ${correctAnswer}`, {
+                duration: 5000,
+                position: 'top-center',
+                style: {background:'rgba(255, 0, 0, 6)', color:'white', font:'bold'},
+            });
+
+            
+
+        }
+    }
+
     return (
+
         <div className='bg-blue-300 w-full mb-28'>
+
+
+        <div className={`${ tostHandel ? 'inline': 'hidden'}`}>
+        <Toaster/>
+        </div>
+
             <div className='max-w-[800px] bg-white m-auto  p-2 my-5 border-2 rounded-2xl border-black'>
                 <div className='flex justify-between items-center p-3'>
                     <p>Quiz {newQuestion + 1} of {questions.length} </p>
@@ -28,18 +66,19 @@ const SingleQuestion = (props) => {
                 <div className={`bg-green-200 p-2 text-center mx-5 rounded-xl ${answer ? 'block' : 'hidden' }`}>
                     <h4 className='font-bold text-xl text-green-700  '>{correctAnswer}</h4>
 
+
                 </div>
 
                 <div>
                     <h3 className='font-bold text-2xl p-3'>Question: {question.slice(3, question.length - 4)}</h3>
+                    
 
                     <div className=''>
                         {
-                            options.map(option => <Option key={option} option={option} options={options}  />  )
-                            
+                            options.map(option => <Option optionClickHandelar={optionClickHandelar} key={option} option={option} options={options}  />   )
                         }
-
                     </div>
+                        
 
                 </div>
                 
