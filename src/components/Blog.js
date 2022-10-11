@@ -10,7 +10,11 @@ const Blog = () => {
                         <details>
                             <summary className="py-2 outline-none cursor-pointer focus:underline">What is the purpose of react router ?</summary>
                             <div className="px-4 pb-4">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde neque in fugiat magni, quas animi enim veritatis deleniti ex. Impedit.</p>
+                                <p>
+                                    React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps the UI in sync with the URL.
+
+                                    ReactJS Router is mainly used for developing Single Page Web Applications. React Router is used to define multiple routes in the application. When a user types a specific URL into the browser, 
+                                    and if this URL path matches any 'route' inside the router file, the user will be redirected to that particular route.</p>
                             </div>
                         </details>
                         <details>

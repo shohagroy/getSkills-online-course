@@ -49,10 +49,10 @@ const studentResult = [
   
     return (
         <div className='bg-gray-200'>
-            <div className='max-w-[800px] m-auto text-center'>
+            <div className='text-center'>
 
 
-            <div className='bg-white flex flex-col justify-center items-center border-2'>
+            <div className='bg-white  flex flex-col justify-center items-center border-2'>
                         <h2 className='text-3xl m-3'>Total Quiz Question</h2>
                         
                         <BarChart
@@ -79,7 +79,7 @@ const studentResult = [
 
                  
                     <div className='bg-white flex flex-col justify-center items-center border-2'>
-                        <h2 className='bg-white  text-3xl m-3'>Students Performance Analysis</h2>
+                        <h2 className='bg-white  text-3xl my-3'>Students Performance Analysis</h2>
                         
                         <BarChart
                         width={500}
@@ -88,7 +88,7 @@ const studentResult = [
                         
                         margin={{
                             top: 5,
-                            right: 30,
+                            right: 50,
                             left: 20,
                             bottom: 5,
                         }}
