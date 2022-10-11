@@ -1,13 +1,17 @@
 import React from 'react';
 
-const Option = ({option}) => {
+const Option = ({option, options}) => {
 
-    console.log()
+    let optionNumber = options.indexOf(option) + 1;
+
+
     return (
-        <div className='m-2 bg-blue-300 cursor-pointer'>
+        <div className='m-2 '>
 
-            <input type="radio" id={`${option}`}  value={`${option}`}/>
-            <label for={`${option}`}>{option}</label>
+            <label className='p-2 cursor-pointer'>
+                <input type="radio" name="fruit"/><span className='p-2'>{optionNumber}: {option}</span>
+            </label>
+            
 
 
         </div>
