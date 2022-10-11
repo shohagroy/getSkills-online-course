@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Banar = () => {
     return (
-       <div className='bg-[#FF6A59] '>
+       <div className='bg-[#FF630E] '>
             <div className="max-w-[1200px] m-auto p-6 py-12 text-gray-900">
         <div className="container mx-auto">
             <div className="flex flex-col lg:flex-row items-center justify-between text-white">

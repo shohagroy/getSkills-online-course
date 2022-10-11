@@ -48,12 +48,12 @@ const studentResult = [
   const totalQuiz = useLoaderData().data
   
     return (
-        <div className='bg-[#111827]'>
-            <div className='max-w-[1200px] m-auto text-center'>
+        <div className='bg-gray-200'>
+            <div className='max-w-[800px] m-auto text-center'>
 
 
             <div className='bg-white flex flex-col justify-center items-center border-2'>
-                        <h2 className='bg-white  text-3xl m-3'>Total Quiz Question</h2>
+                        <h2 className='text-3xl m-3'>Total Quiz Question</h2>
                         
                         <BarChart
                             width={500}

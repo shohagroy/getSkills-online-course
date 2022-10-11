@@ -35,7 +35,7 @@ const Footer = () => {
 				</ul>
 			</div>
 			<div className="col-span-6 text-center md:text-left md:col-span-3">
-            <Link to='/enroll' className='bg-[#FF630E] hover:text-[#FF630E] duration-300 text-white p-3 px-7 font-bold hover:bg-white rounded-md m-3'>ENROLL NOW</Link>
+            <Link to='/enroll' className='bg-[#FF630E] hover:text-[#FF630E] duration-300 text-white p-3 px-7 font-bold hover:bg-white rounded-md m-5'>ENROLL</Link>
 			</div>
 		</div>
 		<div className="grid justify-center pt-6 lg:justify-between">

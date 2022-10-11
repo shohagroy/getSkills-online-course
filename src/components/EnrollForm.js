@@ -2,10 +2,10 @@ import React from 'react';
 
 const EnrollForm = () => {
     return (
-        <div className='bg-[#ff6a5959]'>
+        <div className='bg-gray-900'>
             <section className="max-w-[1200px] m-auto p-6 bg-[] text-gray-50">
 	<div  className="container flex flex-col max-w-[870px] mx-auto space-y-12 ng-untouched  ng-pristine ng-valid">
-		<fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-900">
+		<fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-gray-900 border-2 border-white">
 			<div className="space-y-2 col-span-full ">
 				<p className="font-medium">Personal Inormation</p>
 			</div>

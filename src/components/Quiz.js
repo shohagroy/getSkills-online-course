@@ -15,9 +15,9 @@ const Quiz = ({quiz}) => {
 	<div className="flex flex-col justify-between p-6 space-y-8">
 		<div className="space-y-2">
 			<h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
-			<p className="text-gray-100">total quiz question: {total} you explore this click below button</p>
+			<p className="text-gray-100">Total question: {total} Explore this Quiz click Get Quiz Button</p>
 		</div>
-		<Link to={`quiz/${id}`} type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-400 text-gray-900">Get Quiz</Link>
+		<Link to={`quiz/${id}`} type="button" className="flex items-center justify-center w-full p-3 tracking-wide rounded-md bg-[#FF630E] text-white font-bold">Get Quiz</Link>
 	</div>
 </div>
     );

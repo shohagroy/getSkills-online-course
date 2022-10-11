@@ -60,7 +60,7 @@ const SingleQuestion = (props) => {
 
         swal({
             title: "Good job!",
-            text: `${name} Quiz Complete! Your Result Correct: ${correctAns} and Wrong: ${wrongAns} Please Visited Statistics Page to get Result Chart`,
+            text: `${name} Quiz Complete! Your Result Correct: ${correctAns} and Wrong: ${wrongAns} Visited Statistics Page to Analysis Rechart Thank You`,
             style: {textAlign:'center'} ,
             icon: "success",
           });
@@ -73,12 +73,12 @@ const SingleQuestion = (props) => {
 
     return (
 
-        <div className='bg-blue-300 w-full mb-28'>
+        <div className='bg-gray-200 w-full mb-28'>
 
 
-        <div className={`${ tostHandel ? 'inline': 'hidden'}`}>
-        <Toaster/>
-        </div>
+            <div className={`${ tostHandel ? 'inline': 'hidden'}`}>
+            <Toaster/>
+            </div>
 
             <div className='max-w-[800px] bg-white m-auto  p-2 my-5 border-2 rounded-2xl border-black'>
                 <div className='flex justify-between items-center p-3'>
