@@ -10,14 +10,14 @@ const Quiz = ({quiz}) => {
     return (
 
 
-        <div className="max-w-xs m-auto rounded-md shadow-md bg-gray-900 text-gray-100">
+        <div name='quiz' className="max-w-xs m-auto rounded-md shadow-md bg-gray-900 text-gray-100">
 	<img src={logo} alt={name} className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500" />
 	<div className="flex flex-col justify-between p-6 space-y-8">
 		<div className="space-y-2">
 			<h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
 			<p className="text-gray-100">Total question: {total} Explore this Quiz click Get Quiz Button</p>
 		</div>
-		<Link to={`quiz/${id}`} type="button" className="flex items-center justify-center w-full p-3 tracking-wide rounded-md bg-[#FF630E] text-white font-bold">Get Quiz
+		<Link to={`../home/quiz/${id}`} type="button" className="flex items-center justify-center w-full p-3 tracking-wide rounded-md bg-[#FF630E] text-white font-bold">Get Quiz
 
 		<span className='p-2'>
 			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

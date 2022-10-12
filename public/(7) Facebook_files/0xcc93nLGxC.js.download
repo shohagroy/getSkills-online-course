@@ -1,0 +1,4 @@
+if (self.CavalryLogger) { CavalryLogger.start_js_script(document.currentScript); }/*FB_PKG_DELIM*/
+
+__d("CometStickerPickerPopoverRoot.react",["CometPopover.react","CometRelay","react"],(function(a,b,c,d,e,f,g){"use strict";var h=d("react");function a(a){var b=a.entryPoints.stickerPickerCardEntrypointReference;a=babelHelpers["extends"]({},a.props);a;return h.jsx(c("CometPopover.react"),{withArrow:!0,children:h.jsx(d("CometRelay").EntryPointContainer,{entryPointReference:b,props:a})})}a.displayName=a.name+" [from "+f.id+"]";g["default"]=a}),98);
+__d("DeactivatePasswordReauthRootQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="5360998290662328"}),null);

@@ -8,10 +8,10 @@ const Navigation = () => {
 
     return (
         <div className='sticky top-0 bg-white z-20 '>
-            <div className='max-w-[1200px] m-auto h-[10vh flex justify-between items-center py-6 px-3 relative'>
+            <div className='max-w-[1200px] m-auto h-[10vh] flex justify-between items-center py-6 px-3 relative'>
             <Link to='/'><img className='w-[120px] md:w-[150px]' src={Logo} alt="Logo" /></Link>
                 <div className='hidden md:inline' >
-                    <NavLink to='/' className='px-3 font-bold hover:text-[#FF630E] duration-300  '>Home</NavLink>
+                    <NavLink to='/home' className='px-3 font-bold hover:text-[#FF630E] duration-300'>Home</NavLink>
                     <NavLink to='/enroll' className='px-3 font-bold hover:text-[#FF630E] duration-300 '>Enroll</NavLink>
                     <NavLink to='/statistics' className='px-3 font-bold hover:text-[#FF630E] duration-300 '>Statistics</NavLink>
                     <NavLink to='/blog' className='px-3 font-bold hover:text-[#FF630E] duration-300'>Blog</NavLink>
@@ -28,7 +28,7 @@ const Navigation = () => {
             </div>
 
             <div className= {`flex flex-col text-center w-full h-[90vh] overflow-hidden overflow-hidden bg-gray-900 text-white absolute top-[10vh] ${toggle ? 'right-0' : 'hidden' } `} >
-                    <NavLink to='/' className='p-3 font-bold hover:text-[#FF630E] duration-300 text-2xl m-3 '>Home</NavLink>
+                    <NavLink to='/home' className='p-3 font-bold hover:text-[#FF630E] duration-300 text-2xl m-3 '>Home</NavLink>
                     <NavLink to='/enroll' className='p-3 font-bold hover:text-[#FF630E] duration-300 text-2xl m-3 '>Enroll</NavLink>
                     <NavLink to='/statistics' className='p-3 font-bold hover:text-[#FF630E] duration-300 text-2xl m-6 '>Statistics</NavLink>
                     <NavLink to='/blog' className='p-3 font-bold hover:text-[#FF630E] duration-300 text-2xl m-3 '>Blog</NavLink>

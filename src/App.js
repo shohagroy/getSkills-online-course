@@ -16,13 +16,18 @@ const router = createBrowserRouter([
       element: <Layout/>,
       errorElement: <ErrorPage/>,
       children:[
+        {path: '/home',
+        loader: async () =>{
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+        },
+        element: <Home/>},
         {path: '/',
         loader: async () =>{
           return fetch('https://openapi.programming-hero.com/api/quiz')
         },
         element: <Home/>},
         {path: '/enroll', element: <EnrollForm/>},
-        {path: '/quiz/:id', 
+        {path: 'home/quiz/:id', 
         loader: async ({params}) =>{
           return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
         },
