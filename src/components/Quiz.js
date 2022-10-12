@@ -17,7 +17,15 @@ const Quiz = ({quiz}) => {
 			<h2 className="text-3xl font-semibold tracking-wide">{name}</h2>
 			<p className="text-gray-100">Total question: {total} Explore this Quiz click Get Quiz Button</p>
 		</div>
-		<Link to={`quiz/${id}`} type="button" className="flex items-center justify-center w-full p-3 tracking-wide rounded-md bg-[#FF630E] text-white font-bold">Get Quiz</Link>
+		<Link to={`quiz/${id}`} type="button" className="flex items-center justify-center w-full p-3 tracking-wide rounded-md bg-[#FF630E] text-white font-bold">Get Quiz
+
+		<span className='p-2'>
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+			<path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+			</svg>
+		</span>
+		
+		</Link>
 	</div>
 </div>
     );

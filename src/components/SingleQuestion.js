@@ -60,7 +60,7 @@ const SingleQuestion = (props) => {
 
         swal({
             title: "Good job!",
-            text: `${name} Quiz Complete! Your Result Correct: ${correctAns} and Wrong: ${wrongAns} Visited Statistics Page to Analysis Rechart Thank You`,
+            text: `${name} Quiz Complete! Your Result Correct: ${correctAns} and Wrong: ${wrongAns} Visited Statistics Page to Analysis Rechart... Thank You`,
             style: {textAlign:'center'} ,
             icon: "success",
           });
@@ -109,18 +109,32 @@ const SingleQuestion = (props) => {
                         
 
                 </div>
+
+
                 
-                <div className='text-center mt-5'>
-                <button onClick={()=> setNewQuestion(newQuestion - 1)} type="button" className={`${newQuestion ? 'inline' : 'hidden'} px-8 m-2 py-3 font-semibold rounded bg-[#FF6A59] text-white`}   >Previous</button>
-                <button onClick={()=> setNewQuestion(newQuestion + 1)} type="button" className={`px-8 py-3 font-semibold rounded bg-[#FF6A59] text-white ${newQuestion + 1 === questions.length ? 'hidden' : 'inline'}`}>Next</button>
+                <div className='flex justify-center items-center mt-5'>
+                <button onClick={()=> setNewQuestion(newQuestion - 1)} type="button" className={`${newQuestion ? 'inline' : 'hidden'} px-8 m-2 py-3 font-semibold rounded bg-[#FF6A59] text-white flex`}>
+                <span className='px-1'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+                </span>
+                    Previous
+                </button>
+                <button onClick={()=> setNewQuestion(newQuestion + 1)} type="button" className={`px-8 py-3 font-semibold flex  rounded bg-[#FF6A59] text-white ${newQuestion + 1 === questions.length ? 'hidden' : 'inline'}`}>Next
+
+                <span className='px-1'>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </span>
+                </button>
 
                 {
                     <Link to='/' onClick={viewResultHandelar} type="button" className={`px-8 py-3 font-semibold rounded bg-[#FF6A59] text-white ${newQuestion + 1 === questions.length ? 'inline' : 'hidden'}`}>Get Result</Link>
                 }
 
                 </div>
-                
-
             </div>
         </div>
     );
